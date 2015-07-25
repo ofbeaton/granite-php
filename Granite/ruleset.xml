@@ -211,6 +211,10 @@
     <rule ref="Squiz.ControlStructures.SwitchDeclaration.BreakIndent">
       <severity>0</severity>
     </rule>    
+    <!-- TODO: Only allow empty case if there is a inline comment -->
+    <rule ref="Squiz.ControlStructures.SwitchDeclaration.EmptyCase">
+      <severity>0</severity>
+   </rule>
     
     <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace" />
     <rule ref="Squiz.CSS.ClassDefinitionNameSpacing" />

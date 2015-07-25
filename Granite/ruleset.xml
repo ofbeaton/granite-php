@@ -207,6 +207,10 @@
     <!-- PSR-2: Squiz.ControlStructures.ForLoopDeclaration -->  
     <!-- PSR-2: Squiz.ControlStructures.LowercaseDeclaration -->
     <rule ref="Squiz.ControlStructures.SwitchDeclaration" />
+    <!-- This contradicts PSR2.ControlStructures.SwitchDeclaration -->
+    <rule ref="Squiz.ControlStructures.SwitchDeclaration.BreakIndent">
+      <severity>0</severity>
+    </rule>    
     
     <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace" />
     <rule ref="Squiz.CSS.ClassDefinitionNameSpacing" />

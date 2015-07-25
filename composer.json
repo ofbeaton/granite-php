@@ -1,0 +1,32 @@
+{
+    "name": "ofbeaton/granite",
+    "description": "Strict PHP Coding Style enforced by CodeSniffer 2.3+",
+    "keywords": ["Coding Style", "Code Style", "Code Sniffer", "PHP_CodeSniffer"],
+    "homepage": "https://github.com/ofbeaton/granite",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Finlay Beaton",
+            "email": "ofbeaton@gmail.com"
+        },        
+        {
+            "name": "Phpami Community",
+            "homepage": "https://github.com/ofbeaton/granite/graphs/contributors"
+        }
+    ],
+    "require": {
+        "squizlabs/php_codesniffer": "^2.0@dev"
+    },
+    "require-dev": {
+    },    
+    "config": {
+      "bin-dir": "bin"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

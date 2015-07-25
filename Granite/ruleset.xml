@@ -1,0 +1,339 @@
+<?xml version="1.0"?>
+<ruleset name="Granite">
+    <description>The coding standard for the Granite Strict PHP Code Style.</description>
+  
+    <!-- 
+      PSR2 
+    -->
+    <!-- includes PSR1 -->
+    <rule ref="PSR2"/>
+    
+    <!-- 
+      Generic 
+    -->
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    
+    <rule ref="Generic.Classes.DuplicateClassName" />
+    
+    <rule ref="Generic.CodeAnalysis.EmptyStatement" />
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop" />
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall" />
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer" />
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier" />    
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
+    <!-- code review -->
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.Found">
+        <severity>3</severity>
+    </rule>
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod" />
+    <!-- code review -->
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod.Found">
+      <severity>3</severity>
+    </rule>            
+    
+    <!-- TODO: Make our own DocComment class that only does what we want -->
+    <!-- TODO: Generic.Commenting.DocComment.NonParamGroup should have a fix to simply add a blank line -->
+    <rule ref="Generic.Commenting.DocComment" />
+    <!-- allow file comments to not have short descriptions -->
+    <rule ref="Generic.Commenting.DocComment.MissingShort">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Generic.Commenting.Fixme" />
+    <!-- code review -->
+    <rule ref="Generic.Commenting.Fixme.CommentFound">
+      <severity>3</severity>
+    </rule>
+    <!-- code review -->
+    <rule ref="Generic.Commenting.Fixme.TaskFound">
+      <severity>3</severity>
+    </rule>
+    <rule ref="Generic.Commenting.Todo" />
+    <!-- code review -->
+    <rule ref="Generic.Commenting.Todo.CommentFound">
+      <severity>3</severity>
+    </rule>
+    <!-- code review -->
+    <rule ref="Generic.Commenting.Todo.TaskFound">
+      <severity>3</severity>
+    </rule>
+    
+    <!-- PSR-2: Generic.ControlStructures.InlineControlStructure -->
+    
+    <!-- PSR-1: Generic.Files.ByteOrderMark -->
+    <!-- PSR-2: Generic.Files.LineEndings -->  
+    <!-- PSR-2: Generic.Files.LineLength -->
+    <rule ref="Generic.Files.OneClassPerFile" />
+    <rule ref="Generic.Files.OneInterfacePerFile" />
+    <rule ref="Generic.Files.OneTraitPerFile" />
+    
+    <!-- PSR-2: Generic.Formatting.DisallowMultipleStatements -->
+    <rule ref="Generic.Formatting.NoSpaceAfterCast" />
+    
+    <!-- PSR-2: Generic.Functions.FunctionCallArgumentSpacing -->
+    
+    <rule ref="Generic.Metrics.CyclomaticComplexity">
+        <properties>
+            <property name="complexity" value="10"/>
+            <property name="absoluteComplexity" value="100"/>
+        </properties>
+    </rule>
+    <!-- code review -->
+    <rule ref="Generic.Metrics.CyclomaticComplexity.TooHigh">
+        <severity>3</severity>
+    </rule>
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="nestingLevel" value="5"/>
+            <property name="absoluteNestingLevel" value="50"/>
+        </properties>
+    </rule>
+    <!-- code review -->
+    <rule ref="Generic.Metrics.NestingLevel.TooHigh">
+        <severity>3</severity>
+    </rule>
+    
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName" />
+    <rule ref="Generic.NamingConventions.ConstructorName" />
+    <!-- PSR-1: Generic.NamingConventions.UpperCaseConstantName -->
+    
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag" />
+    <rule ref="Generic.PHP.DeprecatedFunctions" />
+    <!-- PSR-1: Generic.PHP.DisallowShortOpenTag but modified -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag" />
+    <!-- in PSR-1 but disabled this specific warning -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
+      <severity>5</severity>
+    </rule>
+    <!-- PSR-2: Generic.PHP.LowerCaseConstant -->
+    <!-- PSR-2: Generic.PHP.LowerCaseKeyword -->
+    <rule ref="Generic.PHP.NoSilencedErrors" />
+    <rule ref="Generic.PHP.SAPIUsage" />
+    <rule ref="Generic.PHP.Syntax" />
+    
+    <rule ref="Generic.Strings.UnnecessaryStringConcat" />
+    <!-- code review -->
+    <rule ref="Generic.Strings.UnnecessaryStringConcat.Found">
+        <severity>3</severity>
+    </rule>
+    
+    <rule ref="Generic.VersionControl.SubversionProperties" />
+    <!-- set line ending style -->
+    
+    <!-- PSR-2: Generic.WhiteSpace.ScopeIndent but modified -->
+    <!-- PSR-2: Generic.WhiteSpace.DisallowTabIndent -->    
+    
+    <!-- 
+      MySource 
+    -->
+    <rule ref="MySource.Debug.FirebugConsole" />
+    
+    <rule ref="MySource.Objects.AssignThis" />
+    
+    <rule ref="MySource.PHP.EvalObjectFactory" />
+    <rule ref="MySource.PHP.ReturnFunctionValue" />
+    
+    <rule ref="MySource.Strings.JoinStrings" />    
+    
+    <!--
+      Pear
+    -->
+    <!-- PSR-2: PEAR.Functions.ValidDefaultValue -->
+    
+    <rule ref="PEAR.Files.IncludingFile" />
+    
+    <!--
+      Squiz
+    -->
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
+    <!-- TODO: make a ArrayDeclaration that properly determines spacing for short arrays -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration" />
+    <!-- don't complain about key spacing -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration.KeyNotAligned">
+      <severity>0</severity>
+    </rule>
+    <!-- don't complain about end brace spacing -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned">
+      <severity>0</severity>
+    </rule>    
+      
+    <rule ref="Squiz.Classes.ClassDeclaration" />
+    <rule ref="Squiz.Classes.ClassFileName" />
+    <rule ref="Squiz.Classes.DuplicateProperty" />
+    <rule ref="Squiz.Classes.LowercaseClassKeywords" />
+    <rule ref="Squiz.Classes.SelfMemberReference" />
+    <!-- PSR-1: Squiz.Classes.ValidClassName -->        
+    
+    <rule ref="Squiz.Commenting.BlockComment" />
+    <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
+    <rule ref="Squiz.Commenting.ClassComment" />
+    <!-- allow tags like @since -->    
+    <rule ref="Squiz.Commenting.ClassComment.TagNotAllowed">    
+      <severity>0</severity>
+    </rule>        
+    <rule ref="Squiz.Commenting.ClosingDeclarationComment" />
+    <rule ref="Squiz.Commenting.DocCommentAlignment" />
+    <rule ref="Squiz.Commenting.EmptyCatchComment" />
+    <rule ref="Squiz.Commenting.FunctionComment" />
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
+    <!-- TODO: throw $e; should be OK when it match the catch exception type. What can we do about this? -->
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag.WrongNumber">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Commenting.InlineComment" />
+    <!-- allow inline comments that do not start with a capital -->
+    <rule ref="Squiz.Commenting.InlineComment.NotCapital">
+      <severity>0</severity>
+    </rule>
+    <!-- allow inline comments that do not end with a period, exclamation, question -->
+    <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
+      <severity>0</severity>
+    </rule>        
+    <rule ref="Squiz.Commenting.LongConditionClosingComment" />
+    <rule ref="Squiz.Commenting.PostStatementComment" />
+    <!-- code review -->
+    <rule ref="Squiz.Commenting.PostStatementComment.Found">
+      <severity>3</severity>
+    </rule>    
+    <!-- TODO: create our own VariableComment class that has the tags we want to require -->
+    <rule ref="Squiz.Commenting.VariableComment" />
+    <!-- allow tags like @since -->
+    <rule ref="Squiz.Commenting.VariableComment.TagNotAllowed">
+      <severity>0</severity>
+    </rule>
+
+    <!-- PSR-2: Squiz.ControlStructures.ControlSignature -->
+    <!-- PSR-2: Squiz.ControlStructures.ForEachLoopDeclaration -->
+    <!-- PSR-2: Squiz.ControlStructures.ForLoopDeclaration -->  
+    <!-- PSR-2: Squiz.ControlStructures.LowercaseDeclaration -->
+    <rule ref="Squiz.ControlStructures.SwitchDeclaration" />
+    
+    <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace" />
+    <rule ref="Squiz.CSS.ClassDefinitionNameSpacing" />
+    <rule ref="Squiz.CSS.ClassDefinitionOpeningBraceSpace" />
+    <rule ref="Squiz.CSS.ColonSpacing" />
+    <rule ref="Squiz.CSS.ColourDefinition" />
+    <rule ref="Squiz.CSS.DisallowMultipleStyleDefinitions" />
+    <rule ref="Squiz.CSS.DuplicateClassDefinition" />
+    <rule ref="Squiz.CSS.DuplicateStyleDefinition" />
+    <rule ref="Squiz.CSS.EmptyClassDefinition" />
+    <rule ref="Squiz.CSS.EmptyStyleDefinition" />
+    <rule ref="Squiz.CSS.ForbiddenStyles" />
+    <rule ref="Squiz.CSS.Indentation" />
+    <rule ref="Squiz.CSS.LowercaseStyleDefinition" />
+    <rule ref="Squiz.CSS.MissingColon" />
+    <rule ref="Squiz.CSS.NamedColours" />
+    <rule ref="Squiz.CSS.Opacity" />
+    <rule ref="Squiz.CSS.SemicolonSpacing" />
+    <rule ref="Squiz.CSS.ShorthandSize" />
+    
+    <rule ref="Squiz.Formatting.OperatorBracket" />
+    
+    <!-- PSR-2: Squiz.Functions.FunctionDeclaration -->
+    <!-- PSR-2: Squiz.Functions.FunctionDeclarationArgumentSpacing modified -->
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing">
+      <properties>
+        <property name="equalSpacing" value="1"/>
+      </properties>
+    </rule>
+    <rule ref="Squiz.Functions.FunctionDeclarationArgumentSpacing.SpacingAfterHint">
+      <severity>5</severity>
+    </rule>    
+    <rule ref="Squiz.Functions.FunctionDuplicateArgument" />
+    <rule ref="Squiz.Functions.GlobalFunction" />
+    <rule ref="Squiz.Functions.GlobalFunction.Found">
+        <message>Consider putting global function "%s" in a class (non-static for testing)</message>
+    </rule>
+    <!-- PSR-2: Squiz.Functions.LowercaseFunctionKeywords -->
+    <!-- PSR-2: Squiz.Functions.MultilineFunctionDeclaration -->    
+    
+    <rule ref="Squiz.Objects.DisallowObjectStringIndex" />
+    <rule ref="Squiz.Objects.ObjectInstantiation" />
+    <rule ref="Squiz.Objects.ObjectMemberComma" />
+    
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage" />
+    <rule ref="Squiz.Operators.IncrementDecrementUsage" />
+    <rule ref="Squiz.Operators.ValidLogicalOperators" />
+    
+    <rule ref="Squiz.PHP.CommentedOutCode" />
+    <!-- code review -->
+    <rule ref="Squiz.PHP.CommentedOutCode.Found">
+      <severity>3</severity>
+    </rule>
+    <rule ref="Squiz.PHP.DisallowBooleanStatement" />
+    <rule ref="Squiz.PHP.DisallowComparisonAssignment" />
+    <rule ref="Squiz.PHP.DisallowMultipleAssignments" />
+    <rule ref="Squiz.PHP.DisallowObEndFlush" />   
+    <!-- TODO: Squiz.PHP.DisallowSizeFunctionsInLoops that allows while loops. while (count($threads) > 0) is too valid to avoid -->
+    <!-- TODO: we need something that disallows print_r only if it doesn't return, but prints -->
+    <!-- TODO: A version of Squiz.PHP.DiscouragedFunctions that only disallows error_log and var_dump -->                    
+    <rule ref="Squiz.PHP.EmbeddedPhp" />
+    <rule ref="Squiz.PHP.Eval" />
+    <rule ref="Squiz.PHP.ForbiddenFunctions" />
+    <rule ref="Squiz.PHP.GlobalKeyword" />
+    <rule ref="Squiz.PHP.Heredoc" />
+    <rule ref="Squiz.PHP.InnerFunctions" />
+    <rule ref="Squiz.PHP.LowercasePHPFunctions" />
+    <rule ref="Squiz.PHP.NonExecutableCode" />
+    
+    <rule ref="Squiz.Scope.MemberVarScope" />
+    <!-- PSR-2: Squiz.Scope.MethodScope -->
+    <rule ref="Squiz.Scope.StaticThisUsage" />
+    
+    <!-- TODO: Allow concat operators to have newlines, but not spaces, around them -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing" />
+    <!-- allow concat operators to be surrounded by newlines -->
+    <rule ref="Squiz.Strings.ConcatenationSpacing.PaddingFound">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Strings.DoubleQuoteUsage" />
+    <rule ref="Squiz.Strings.EchoedStrings" />
+       
+    <rule ref="Squiz.WhiteSpace.CastSpacing" />
+    <!-- TODO: force blank line above multiple catch, elseif, else -->
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing" />
+    <!-- allow blank lines above catch, elseif, else -->
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose">
+      <severity>0</severity>
+    </rule>
+      
+    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace" />
+    <!-- TODO: We may want to require 0 spaces before close, this one wants 1 -->
+    <!-- allow no blank lines before close -->
+    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />  
+    <!-- TODO: must allow no lines after class on last method of class -->    
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing" />
+    <!-- allow no lines after method class, for last method in class -->
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing.After">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
+    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" />
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing" />                                                                
+    <!-- PSR-2: Squiz.WhiteSpace.ScopeClosingBrace -->
+    <!-- PSR-2: Squiz.WhiteSpace.ScopeKeywordSpacing -->
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
+    <!-- PSR-2: Squiz.WhiteSpace.SuperfluousWhitespace" but modified -->
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+      <properties>
+        <property name="ignoreBlankLines" value="false"/>
+      </properties>    
+    </rule>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile">
+      <severity>5</severity>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EndFile">
+      <severity>5</severity>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyFile">
+      <severity>5</severity>
+    </rule>
+        
+               
+</ruleset>

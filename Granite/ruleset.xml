@@ -274,7 +274,11 @@
     <rule ref="Squiz.PHP.DisallowObEndFlush" />   
     <!-- TODO: Squiz.PHP.DisallowSizeFunctionsInLoops that allows while loops. while (count($threads) > 0) is too valid to avoid -->
     <!-- TODO: we need something that disallows print_r only if it doesn't return, but prints -->
-    <!-- TODO: A version of Squiz.PHP.DiscouragedFunctions that only disallows error_log and var_dump -->                    
+    <rule ref="Squiz.PHP.DiscouragedFunctions">
+      <properties>
+         <property name="forbiddenFunctions" type="array" value="var_dump=>null"/>
+      </properties>    
+    </rule>                   
     <rule ref="Squiz.PHP.EmbeddedPhp" />
     <rule ref="Squiz.PHP.Eval" />
     <rule ref="Squiz.PHP.ForbiddenFunctions" />

@@ -152,6 +152,10 @@
     <rule ref="Squiz.Arrays.ArrayDeclaration.KeyNotAligned">
       <severity>0</severity>
     </rule>
+    <!-- don't complain about value spacing -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNotAligned">
+      <severity>0</severity>
+    </rule>        
     <!-- don't complain about end brace spacing -->
     <rule ref="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned">
       <severity>0</severity>

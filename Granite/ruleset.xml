@@ -296,8 +296,11 @@
     <!-- PSR-2: Squiz.Scope.MethodScope -->
     <rule ref="Squiz.Scope.StaticThisUsage" />
     
-    <!-- TODO: Allow concat operators to have newlines, but not spaces, around them -->
-    <rule ref="Squiz.Strings.ConcatenationSpacing" />
+    <rule ref="Squiz.Strings.ConcatenationSpacing">
+       <properties>
+           <property name="ignoreNewlines" value="true"/>
+       </properties>
+    </rule>
     <!-- allow concat operators to be surrounded by newlines -->
     <rule ref="Squiz.Strings.ConcatenationSpacing.PaddingFound">
       <severity>0</severity>

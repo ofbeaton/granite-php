@@ -301,10 +301,6 @@
            <property name="ignoreNewlines" value="true"/>
        </properties>
     </rule>
-    <!-- allow concat operators to be surrounded by newlines -->
-    <rule ref="Squiz.Strings.ConcatenationSpacing.PaddingFound">
-      <severity>0</severity>
-    </rule>
     
     <rule ref="Squiz.Strings.DoubleQuoteUsage" />
     <rule ref="Squiz.Strings.EchoedStrings" />

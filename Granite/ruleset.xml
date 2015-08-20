@@ -146,20 +146,7 @@
       Squiz
     -->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
-    <!-- TODO: make a ArrayDeclaration that properly determines spacing for short arrays -->
     <rule ref="Squiz.Arrays.ArrayDeclaration" />
-    <!-- don't complain about key spacing -->
-    <rule ref="Squiz.Arrays.ArrayDeclaration.KeyNotAligned">
-      <severity>0</severity>
-    </rule>
-    <!-- don't complain about value spacing -->
-    <rule ref="Squiz.Arrays.ArrayDeclaration.ValueNotAligned">
-      <severity>0</severity>
-    </rule>        
-    <!-- don't complain about end brace spacing -->
-    <rule ref="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned">
-      <severity>0</severity>
-    </rule>    
       
     <rule ref="Squiz.Classes.ClassDeclaration" />
     <rule ref="Squiz.Classes.ClassFileName" />

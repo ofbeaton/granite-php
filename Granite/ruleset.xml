@@ -180,6 +180,10 @@
     <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
       <severity>0</severity>
     </rule>        
+    <!-- allow inline comments docblock for dependency injection ints -->
+    <rule ref="Squiz.Commenting.InlineComment.DocBlock">
+      <severity>0</severity>
+    </rule>
     <rule ref="Squiz.Commenting.LongConditionClosingComment" />
     <rule ref="Squiz.Commenting.PostStatementComment" />
     <!-- code review -->

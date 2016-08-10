@@ -10,23 +10,19 @@
             "email": "ofbeaton@gmail.com"
         },        
         {
-            "name": "Phpami Community",
+            "name": "Granite Community",
             "homepage": "https://github.com/ofbeaton/granite/graphs/contributors"
         }
     ],
     "require": {
-        "squizlabs/php_codesniffer": "^2.0@dev"
-    },
-    "require-dev": {
+        "squizlabs/php_codesniffer": "^2.0"
     },    
     "config": {
-      "bin-dir": "bin"
+      "bin-dir": "vbin"
     },
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
         }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

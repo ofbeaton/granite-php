@@ -155,7 +155,11 @@
     <rule ref="Squiz.Classes.SelfMemberReference" />
     <!-- PSR-1: Squiz.Classes.ValidClassName -->        
     
+    <!-- TODO: Create our own BlockComment class that allows single line variable hints for IDEs --> 
     <rule ref="Squiz.Commenting.BlockComment" />
+    <rule ref="Squiz.Commenting.BlockComment.SingleLine">    
+      <severity>0</severity>
+    </rule>    
     <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
     <rule ref="Squiz.Commenting.ClassComment" />
     <!-- allow tags like @since -->    

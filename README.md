@@ -1,5 +1,5 @@
 # granite
-Strict PHP Coding Style enforced by [CodeSniffer 2.x](https://github.com/squizlabs/PHP_CodeSniffer). Can also process javascript and css files if configured.
+Strict PHP Coding Style enforced by [CodeSniffer 3.x](https://github.com/squizlabs/PHP_CodeSniffer). Can also process javascript and css files if configured.
 
 ## Installing via Composer
 

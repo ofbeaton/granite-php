@@ -24,7 +24,7 @@ Edit your composer .json and add a config section:
   ...
   
   "config": {
-    "bin-dir": "bin"
+    "bin-dir": "vbin"
   },
   
   ...
@@ -40,16 +40,8 @@ composer.phar update ofbeaton/granite
 After installing, you can now run PHP_CodeSniffer:
 
 ```bash
-bin/phpcs --Standard=vendor/granite/Granite
+vbin/phpcs --Standard=vendor/granite/Granite
 ```
-
-## Support Me
-
-Hi, I'm Finlay Beaton ([@ofbeaton](https://github.com/ofbeaton)). This software is made possible by donations of fellow users like you, encouraging me to toil the midnight hours away and sweat into the code and documentation. 
-
-Everyone's time should be valuable, please consider donating.
-
-[Donate through Paypal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=RDWQCGL5UD6DS&lc=CA&item_name=ofbeaton&item_number=granite&currency_code=CAD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
 
 ## License
 

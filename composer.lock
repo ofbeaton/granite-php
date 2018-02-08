@@ -4,8 +4,55 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fb1b33b2bcc22f1bac18532e8da08df",
+    "content-hash": "f07a79bfeb2bbb13df8a2801bd7a215c",
     "packages": [
+        {
+            "name": "ofbeaton/granite-lite",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ofbeaton/granite-lite.git",
+                "reference": "382be2c3b8d1b8e5163d2ce11aae1c9237941cca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ofbeaton/granite-lite/zipball/382be2c3b8d1b8e5163d2ce11aae1c9237941cca",
+                "reference": "382be2c3b8d1b8e5163d2ce11aae1c9237941cca",
+                "shasum": ""
+            },
+            "require": {
+                "squizlabs/php_codesniffer": "^3.2.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Finlay Beaton",
+                    "email": "ofbeaton@gmail.com"
+                },
+                {
+                    "name": "Granite Lite Community",
+                    "homepage": "https://github.com/ofbeaton/granite-lite/graphs/contributors"
+                }
+            ],
+            "description": "Strict PHP Coding Style on non-comments enforced by CodeSniffer 3.2+",
+            "homepage": "https://github.com/ofbeaton/granite-lite",
+            "keywords": [
+                "Code style",
+                "Coding Style",
+                "PHP_CodeSniffer",
+                "code sniffer"
+            ],
+            "time": "2018-02-08T16:43:53+00:00"
+        },
         {
             "name": "squizlabs/php_codesniffer",
             "version": "3.2.2",

@@ -1,6 +1,13 @@
 # granite
 Strict PHP Coding Style enforced by [CodeSniffer 3.x](https://github.com/squizlabs/PHP_CodeSniffer). Can also process javascript and css files if configured.
 
+## How does this differ from [granite-lite](https://github.com/ofbeaton/granite-lite)?
+
+`granite` enforces many documentation (docblock) and comment styles. 
+`granite-lite` only enforces its styles on code, not comments.
+
+For example, you may find `granite` useful for your project source, and `granite-lite` for your test suite. 
+
 ## Installing via Composer
 
 The recommended way to install Granite is through

@@ -3,7 +3,7 @@
     <description>The coding standard for the Granite Strict PHP Code Style.</description>
       
     <!-- includes Granite Lite -->
-    <rule ref="../granite-lite/GraniteLite"/>
+    <rule ref="../../granite-lite/GraniteLite"/>
     
     <!-- 
       Generic 

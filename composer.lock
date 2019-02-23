@@ -1,32 +1,32 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f07a79bfeb2bbb13df8a2801bd7a215c",
+    "content-hash": "0a3b11c07cf148d94e7cafd771fbc4c6",
     "packages": [
         {
             "name": "ofbeaton/granite-lite",
-            "version": "1.0",
+            "version": "2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ofbeaton/granite-lite.git",
-                "reference": "382be2c3b8d1b8e5163d2ce11aae1c9237941cca"
+                "reference": "086e9d11bafd62c0b8b62a1463bcd0ae861d594d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ofbeaton/granite-lite/zipball/382be2c3b8d1b8e5163d2ce11aae1c9237941cca",
-                "reference": "382be2c3b8d1b8e5163d2ce11aae1c9237941cca",
+                "url": "https://api.github.com/repos/ofbeaton/granite-lite/zipball/086e9d11bafd62c0b8b62a1463bcd0ae861d594d",
+                "reference": "086e9d11bafd62c0b8b62a1463bcd0ae861d594d",
                 "shasum": ""
             },
             "require": {
-                "squizlabs/php_codesniffer": "^3.2.2"
+                "squizlabs/php_codesniffer": "^3.4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -43,7 +43,7 @@
                     "homepage": "https://github.com/ofbeaton/granite-lite/graphs/contributors"
                 }
             ],
-            "description": "Strict PHP Coding Style on non-comments enforced by CodeSniffer 3.2+",
+            "description": "Strict PHP Coding Style on non-comments enforced by CodeSniffer 3.4+",
             "homepage": "https://github.com/ofbeaton/granite-lite",
             "keywords": [
                 "Code style",
@@ -51,20 +51,20 @@
                 "PHP_CodeSniffer",
                 "code sniffer"
             ],
-            "time": "2018-02-08T16:43:53+00:00"
+            "time": "2019-02-23T07:18:56+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.2",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1"
+                "reference": "379deb987e26c7cd103a7b387aea178baec96e48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
-                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/379deb987e26c7cd103a7b387aea178baec96e48",
+                "reference": "379deb987e26c7cd103a7b387aea178baec96e48",
                 "shasum": ""
             },
             "require": {
@@ -74,7 +74,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0"
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "bin": [
                 "bin/phpcs",
@@ -102,7 +102,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-12-19T21:44:46+00:00"
+            "time": "2018-12-19T23:57:18+00:00"
         }
     ],
     "packages-dev": [],

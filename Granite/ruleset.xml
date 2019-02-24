@@ -11,6 +11,9 @@
     <!-- TODO: Make our own DocComment class that only does what we want -->
     <!-- TODO: Generic.Commenting.DocComment.NonParamGroup should have a fix to simply add a blank line -->
     <rule ref="Generic.Commenting.DocComment" />
+    <rule ref="Generic.Commenting.DocComment.ShortNotCapital">
+      <severity>0</severity>
+    </rule>
     <!-- allow file comments to not have short descriptions -->
     <rule ref="Generic.Commenting.DocComment.MissingShort">
       <severity>0</severity>
@@ -52,6 +55,12 @@
     <rule ref="Squiz.Commenting.DocCommentAlignment" />
     <rule ref="Squiz.Commenting.EmptyCatchComment" />
     <rule ref="Squiz.Commenting.FunctionComment" />
+    <rule ref="Squiz.Commenting.FunctionComment.ParamCommentFullStop">
+      <severity>0</severity>
+    </rule>
+    <rule ref="Squiz.Commenting.FunctionComment.ParamCommentNotCapital">
+      <severity>0</severity>
+    </rule>    
     <rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
     <!-- TODO: throw $e; should be OK when it match the catch exception type. What can we do about this? -->
     <rule ref="Squiz.Commenting.FunctionCommentThrowTag.WrongNumber">

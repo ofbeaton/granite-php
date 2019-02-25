@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="granite-tests">
+    <description>Opinionated coding style enforcement for PHP test suites.</description>
+
+    <rule ref="granite-syntax"/>
+
+</ruleset>

@@ -35,10 +35,10 @@ Edit your `composer.json` and add or modify `scripts` section:
     ],
     "check-tests": [
       "parallel-lint . --exclude vendor",
-      "phpcs -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-syntax"      
+      "phpcs -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-tests"      
     ],
     "fix-tests": [
-      "phpcbf -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-syntax"
+      "phpcbf -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-tests"
     ],
     "test": [
       "@check",

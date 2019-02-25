@@ -41,8 +41,7 @@ Edit your `composer.json` and add or modify `scripts` section:
       "phpcbf -p --standard=vendor/ofbeaton/granite-php/phpcs/granite-tests --ignore=vendor ."
     ],
     "test": [
-      "@check",
-      "@check-tests"
+      "@check"
     ]
   },
   

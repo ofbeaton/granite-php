@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<ruleset name="Granite">
-    <description>The coding standard for the Granite Strict PHP Code Style.</description>
-      
-    <!-- includes Granite Lite -->
-    <rule ref="../../granite-lite/GraniteLite"/>
+<ruleset name="granite-docs">
+    <description>Opinionated coding style enforcement for PHP documentation.</description>
+    
+    <!-- docs is defined as machine-readable docs, like PHPDoc -->
     
     <!-- 
       Generic 

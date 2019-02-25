@@ -1,32 +1,49 @@
 # granite
-Strict PHP Coding Style enforced by [CodeSniffer 3.x](https://github.com/squizlabs/PHP_CodeSniffer). Can also process javascript and css files if configured.
+Opinionated coding style enforcement for PHP.
 
-## How does this differ from [granite-lite](https://github.com/ofbeaton/granite-lite)?
-
-`granite` enforces many documentation (docblock) and comment styles. 
-`granite-lite` only enforces its styles on code, not comments.
-
-For example, you may find `granite` useful for your project source, and `granite-lite` for your test suite. 
+## Contains
+We make use of the following programs:
+* [PHP-Parallel-Lint](https://github.com/JakubOnderka/PHP-Parallel-Lint)
+* [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 
 ## Installing via Composer
 
-The recommended way to install Granite is through
+The recommended way to install granite-php is through
 [Composer](http://getcomposer.org). Ensure you have it installed first.
 
 Next, run the Composer command to install the latest stable version:
 
 ```bash
-composer require ofbeaton/granite
+composer require ofbeaton/granite-php
+composer require squizlabs/php_codesniffer
+composer require jakub-onderka/php-parallel-lint jakub-onderka/php-console-highlighter
 ```
 
-Edit your `composer.json` and add a `config` section:
+Edit your `composer.json` and add or modify `scripts` section:
 
 ```json
 {
   ...
   
-  "config": {
-    "bin-dir": "vbin"
+  "scripts": {
+    "check": [
+      "parallel-lint . --exclude vendor",
+      "phpcs -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite"      
+    ],
+    "fix": [
+      "phpcbf -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite"
+    ],
+    "check-tests": [
+      "parallel-lint . --exclude vendor",
+      "phpcs -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-syntax"      
+    ],
+    "fix-tests": [
+      "phpcbf -p --Standard=vendor/ofbeaton/granite-php/phpcs/granite-syntax"
+    ],
+    "test": [
+      "@check",
+      "@check-tests"
+    ]
   },
   
   ...
@@ -36,13 +53,21 @@ Edit your `composer.json` and add a `config` section:
 And update your project:
 
 ```bash
-composer update ofbeaton/granite
+composer update ofbeaton/granite-php
 ```
 
-After updating, you can now run PHP_CodeSniffer:
+After updating, you can now run granite-php:
 
 ```bash
-vbin/phpcs --Standard=vendor/granite/Granite
+composer test
+```
+
+## Running on granite-php on test suites
+
+You usually want to relax some requirements for test suites, in that case run:
+
+```bash
+composer check-tests
 ```
 
 ## License

@@ -1,8 +1,8 @@
 {
-    "name": "ofbeaton/granite",
-    "description": "Strict PHP Coding Style enforced by CodeSniffer 3.4+",
-    "keywords": ["Coding Style", "Code Style", "Code Sniffer", "PHP_CodeSniffer"],
-    "homepage": "https://github.com/ofbeaton/granite",
+    "name": "ofbeaton/granite-php",
+    "description": "Opinionated PHP Coding Style enforcement for PHP",
+    "keywords": ["lint", "Coding Style", "Code Style", "Code Sniffer", "PHP_CodeSniffer"],
+    "homepage": "https://github.com/ofbeaton/granite-php",
     "license": "MIT",
     "authors": [
         {
@@ -11,19 +11,21 @@
         },        
         {
             "name": "Granite Community",
-            "homepage": "https://github.com/ofbeaton/granite/graphs/contributors"
+            "homepage": "https://github.com/ofbeaton/granite-php/graphs/contributors"
         }
     ],
-    "require": {
-        "squizlabs/php_codesniffer": "^3.4.0",
-        "ofbeaton/granite-lite": "^2.0"
+    "suggest": {
+        "squizlabs/php_codesniffer": "check and fix granite code style",
+        "jakub-onderka/php-parallel-lint": "speed up `php -l` check",
+        "jakub-onderka/php-console-highlighter": "Highlight syntax for php-parallel-lint"
+        
     },    
     "config": {
       "bin-dir": "vbin"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "3.0-dev"
+            "dev-master": "4.0-dev"
         }
     }
 }

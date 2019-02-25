@@ -9,14 +9,12 @@
     -->
     <!-- TODO: Make our own DocComment class that only does what we want -->
     <!-- TODO: Generic.Commenting.DocComment.NonParamGroup should have a fix to simply add a blank line -->
-    <rule ref="Generic.Commenting.DocComment" />
-    <rule ref="Generic.Commenting.DocComment.ShortNotCapital">
-      <severity>0</severity>
+    <rule ref="Generic.Commenting.DocComment">
+      <!-- allow file comments to not have short descriptions -->
+      <exclude name="Generic.Commenting.DocComment.MissingShort"/>
+      <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
     </rule>
-    <!-- allow file comments to not have short descriptions -->
-    <rule ref="Generic.Commenting.DocComment.MissingShort">
-      <severity>0</severity>
-    </rule>
+
     <rule ref="Generic.Commenting.Fixme" />
     <!-- code review -->
     <rule ref="Generic.Commenting.Fixme.CommentFound">
@@ -40,43 +38,32 @@
       Squiz
     -->
     <!-- TODO: Create our own BlockComment class that allows single line variable hints for IDEs --> 
-    <rule ref="Squiz.Commenting.BlockComment" />
-    <rule ref="Squiz.Commenting.BlockComment.SingleLine">    
-      <severity>0</severity>
+    <rule ref="Squiz.Commenting.BlockComment">
+      <except name="Squiz.Commenting.BlockComment.SingleLine"/>
     </rule>    
     <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
-    <rule ref="Squiz.Commenting.ClassComment" />
-    <!-- allow tags like @since -->    
-    <rule ref="Squiz.Commenting.ClassComment.TagNotAllowed">    
-      <severity>0</severity>
+    <rule ref="Squiz.Commenting.ClassComment">
+         <!-- allow tags like @since -->    
+         <exclude name="Squiz.Commenting.ClassComment.TagNotAllowed"/>
     </rule>        
     <rule ref="Squiz.Commenting.ClosingDeclarationComment" />
     <rule ref="Squiz.Commenting.DocCommentAlignment" />
     <rule ref="Squiz.Commenting.EmptyCatchComment" />
-    <rule ref="Squiz.Commenting.FunctionComment" />
-    <rule ref="Squiz.Commenting.FunctionComment.ParamCommentFullStop">
-      <severity>0</severity>
+    <rule ref="Squiz.Commenting.FunctionComment">
+         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
+         <exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
+    </rule>                
+    <rule ref="Squiz.Commenting.FunctionCommentThrowTag">
+      <!-- TODO: throw $e; should be OK when it match the catch exception type. What can we do about this? -->
+      <exclude name="Squiz.Commenting.FunctionCommentThrowTag.WrongNumber"/>
     </rule>
-    <rule ref="Squiz.Commenting.FunctionComment.ParamCommentNotCapital">
-      <severity>0</severity>
-    </rule>    
-    <rule ref="Squiz.Commenting.FunctionCommentThrowTag" />
-    <!-- TODO: throw $e; should be OK when it match the catch exception type. What can we do about this? -->
-    <rule ref="Squiz.Commenting.FunctionCommentThrowTag.WrongNumber">
-      <severity>0</severity>
-    </rule>
-    <rule ref="Squiz.Commenting.InlineComment" />
-    <!-- allow inline comments that do not start with a capital -->
-    <rule ref="Squiz.Commenting.InlineComment.NotCapital">
-      <severity>0</severity>
-    </rule>
-    <!-- allow inline comments that do not end with a period, exclamation, question -->
-    <rule ref="Squiz.Commenting.InlineComment.InvalidEndChar">
-      <severity>0</severity>
-    </rule>        
-    <!-- allow inline comments docblock for dependency injection ints -->
-    <rule ref="Squiz.Commenting.InlineComment.DocBlock">
-      <severity>0</severity>
+    <rule ref="Squiz.Commenting.InlineComment">
+      <!-- allow inline comments that do not start with a capital -->
+      <exclude name="Squiz.Commenting.InlineComment.NotCapital"/>
+      <!-- allow inline comments that do not end with a period, exclamation, question -->
+      <exclude name="Squiz.Commenting.InlineComment.InvalidEndChar"/>
+      <!-- allow inline comments docblock for dependency injection ints -->
+      <exclude name="Squiz.Commenting.InlineComment.DocBlock"/>
     </rule>
     <rule ref="Squiz.Commenting.LongConditionClosingComment" />
     <rule ref="Squiz.Commenting.PostStatementComment" />
@@ -85,10 +72,9 @@
       <severity>3</severity>
     </rule>    
     <!-- TODO: create our own VariableComment class that has the tags we want to require -->
-    <rule ref="Squiz.Commenting.VariableComment" />
-    <!-- allow tags like @since -->
-    <rule ref="Squiz.Commenting.VariableComment.TagNotAllowed">
-      <severity>0</severity>
+    <rule ref="Squiz.Commenting.VariableComment">
+      <!-- allow tags like @since -->
+      <exclude name="Squiz.Commenting.VariableComment.TagNotAllowed"/>
     </rule>
                
 </ruleset>

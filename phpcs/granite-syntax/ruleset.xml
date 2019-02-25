@@ -7,7 +7,13 @@
     -->
     <!-- includes PSR1 -->
     <!-- replaces PSR2 -->
-    <rule ref="PSR12"/>
+    <rule ref="PSR12">
+       <!-- PSR-12: PSR12.Operators.OperatorSpacing -->
+       <!-- we disagree with PSR-12, we want operator spacing, 
+            but not on concatenation. Try to keep the squiz ones instead -->
+       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore" />
+       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter" />   
+    </rule>
     
     <!-- 
       Generic 
@@ -84,10 +90,12 @@
     <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag" />
     <rule ref="Generic.PHP.DeprecatedFunctions" />
     <!-- PSR-1: Generic.PHP.DisallowShortOpenTag but modified -->
-    <rule ref="Generic.PHP.DisallowShortOpenTag" />
-    <!-- in PSR-1 but disabled this specific warning -->
+    <rule ref="Generic.PHP.DisallowShortOpenTag">
+      
+    </rule>    
+    <!-- in PSR-1 but reserved for code review because of edge cases -->
     <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
-      <severity>5</severity>
+      <severity>3</severity>
     </rule>
     <rule ref="Generic.PHP.ForbiddenFunctions" />
     <!-- PSR-12: Generic.PHP.LowerCaseConstant -->
@@ -163,17 +171,7 @@
     
     <!-- PSR-12: PSR12.Keywords.ShortFormTypeKeywords -->
     
-    <!-- PSR-12: PSR12.Namespaces.CompoundNamespaceDepth -->
-    
-    <!-- PSR-12: PSR12.Operators.OperatorSpacing -->
-    <!-- we disagree with PSR-12, we want operator spacing, 
-         but not on concatenation. Try to keep the squiz ones instead -->
-    <rule ref="PSR12.Operators.OperatorSpacing.NoSpaceBefore">
-      <severity>0</severity>
-    </rule>
-    <rule ref="PSR12.Operators.OperatorSpacing.NoSpaceAfter">
-      <severity>0</severity>
-    </rule>    
+    <!-- PSR-12: PSR12.Namespaces.CompoundNamespaceDepth -->           
     
     <!--
       Squiz
@@ -192,15 +190,12 @@
     <!-- PSR-12: Squiz.ControlStructures.ForEachLoopDeclaration -->
     <!-- PSR-12: Squiz.ControlStructures.ForLoopDeclaration -->  
     <!-- PSR-12: Squiz.ControlStructures.LowercaseDeclaration -->
-    <rule ref="Squiz.ControlStructures.SwitchDeclaration" />
-    <!-- This contradicts PSR2.ControlStructures.SwitchDeclaration -->
-    <rule ref="Squiz.ControlStructures.SwitchDeclaration.BreakIndent">
-      <severity>0</severity>
+    <rule ref="Squiz.ControlStructures.SwitchDeclaration">
+         <!-- This contradicts PSR2.ControlStructures.SwitchDeclaration -->
+         <exclude name="Squiz.ControlStructures.SwitchDeclaration.BreakIndent" />
+         <!-- TODO: Only allow empty case if there is a inline comment -->
+         <exclude name="Squiz.ControlStructures.SwitchDeclaration.EmptyCase"/>
     </rule>    
-    <!-- TODO: Only allow empty case if there is a inline comment -->
-    <rule ref="Squiz.ControlStructures.SwitchDeclaration.EmptyCase">
-      <severity>0</severity>
-    </rule>
    
     <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace" />
     <rule ref="Squiz.CSS.ClassDefinitionNameSpacing" />
@@ -284,30 +279,28 @@
     </rule>    
     <rule ref="Squiz.Strings.DoubleQuoteUsage" />
     <rule ref="Squiz.Strings.EchoedStrings" />
-    
-    <rule ref="Squiz.WhiteSpace.CastSpacing" />
+      
+    <rule ref="Squiz.WhiteSpace.CastSpacing">
+       <!-- let's try without these for PSR-12 adoption
+       allow blank lines above catch, elseif, else
+       <except name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+       -->        
+    </rule>
     <!-- TODO: force blank line above multiple catch, elseif, else -->
     <!-- PSR-12: Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen -->
     <!-- PSR-12: Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose -->
-    <!-- let's try without these for PSR-12 adoption
-    allow blank lines above catch, elseif, else
-    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose">
-      <severity>0</severity>
-    </rule>
-    -->        
-    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace" />
-    <!-- TODO: We may want to require 0 spaces before close, this one wants 1 -->
-    <!-- allow no blank lines before close -->
-    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose">
-      <severity>0</severity>
-    </rule>
+        
+    <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace">
+      <!-- TODO: We may want to require 0 spaces before close, this one wants 1 -->
+      <!-- allow no blank lines before close -->
+      <except name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+    </rule>    
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
     
     <!-- TODO: must allow no lines after class on last method of class -->    
-    <rule ref="Squiz.WhiteSpace.FunctionSpacing" />
-    <!-- allow no lines after method class, for last method in class -->
-    <rule ref="Squiz.WhiteSpace.FunctionSpacing.AfterLast">
-      <severity>0</severity>
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+      <!-- allow no lines after method class, for last method in class -->
+      <except name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
     </rule>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing" />
@@ -329,6 +322,5 @@
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.EmptyFile">
       <severity>5</severity>
     </rule>
-    -->     
-               
+    -->                    
 </ruleset>

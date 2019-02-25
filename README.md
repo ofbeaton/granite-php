@@ -62,7 +62,7 @@ After updating, you can now run granite-php:
 composer test
 ```
 
-## Running on granite-php on test suites
+## Running granite-php on test suites
 
 You usually want to relax some requirements for test suites, in that case run:
 

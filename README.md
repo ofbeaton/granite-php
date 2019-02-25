@@ -28,20 +28,21 @@ Edit your `composer.json` and add or modify `scripts` section:
   "scripts": {
     "check": [
       "parallel-lint . --exclude vendor",
-      "phpcs -p --standard=vendor/ofbeaton/granite-php/phpcs/granite --ignore=vendor ."      
+      "phpcs -p --standard=vendor/ofbeaton/granite-php/phpcs/granite --ignore=vendor src"      
     ],
     "fix": [
-      "phpcbf -p --standard=vendor/ofbeaton/granite-php/phpcs/granite --ignore=vendor ."
+      "phpcbf -p --standard=vendor/ofbeaton/granite-php/phpcs/granite --ignore=vendor src"
     ],
     "check-tests": [
       "parallel-lint . --exclude vendor",
-      "phpcs -p --standard=vendor/ofbeaton/granite-php/phpcs/granite-tests --ignore=vendor ."      
+      "phpcs -p --standard=vendor/ofbeaton/granite-php/phpcs/granite-tests --ignore=vendor tests"      
     ],
     "fix-tests": [
-      "phpcbf -p --standard=vendor/ofbeaton/granite-php/phpcs/granite-tests --ignore=vendor ."
+      "phpcbf -p --standard=vendor/ofbeaton/granite-php/phpcs/granite-tests --ignore=vendor tests"
     ],
     "test": [
-      "@check"
+      "@check",
+      "@check-tests"
     ]
   },
   

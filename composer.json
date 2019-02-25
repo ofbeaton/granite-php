@@ -14,12 +14,11 @@
             "homepage": "https://github.com/ofbeaton/granite-php/graphs/contributors"
         }
     ],
-    "suggest": {
-        "squizlabs/php_codesniffer": "check and fix granite code style",
-        "jakub-onderka/php-parallel-lint": "speed up `php -l` check",
-        "jakub-onderka/php-console-highlighter": "Highlight syntax for php-parallel-lint"
-        
-    },    
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.4",
+        "jakub-onderka/php-parallel-lint": "^1.0",
+        "jakub-onderka/php-console-highlighter": "^0.4.0"
+    },
     "config": {
       "bin-dir": "vbin"
     },
@@ -27,5 +26,5 @@
         "branch-alias": {
             "dev-master": "4.0-dev"
         }
-    }
+    }    
 }

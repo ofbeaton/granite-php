@@ -15,7 +15,7 @@
       <exclude name="Generic.Commenting.DocComment.ShortNotCapital"/>
     </rule>
 
-    <rule ref="Generic.Commenting.Fixme" />
+    <rule ref="Generic.Commenting.Fixme"/>
     <!-- code review -->
     <rule ref="Generic.Commenting.Fixme.CommentFound">
       <severity>3</severity>
@@ -24,7 +24,7 @@
     <rule ref="Generic.Commenting.Fixme.TaskFound">
       <severity>3</severity>
     </rule>
-    <rule ref="Generic.Commenting.Todo" />
+    <rule ref="Generic.Commenting.Todo"/>
     <!-- code review -->
     <rule ref="Generic.Commenting.Todo.CommentFound">
       <severity>3</severity>
@@ -46,9 +46,9 @@
          <!-- allow tags like @since -->    
          <exclude name="Squiz.Commenting.ClassComment.TagNotAllowed"/>
     </rule>        
-    <rule ref="Squiz.Commenting.ClosingDeclarationComment" />
-    <rule ref="Squiz.Commenting.DocCommentAlignment" />
-    <rule ref="Squiz.Commenting.EmptyCatchComment" />
+    <rule ref="Squiz.Commenting.ClosingDeclarationComment"/>
+    <rule ref="Squiz.Commenting.DocCommentAlignment"/>
+    <rule ref="Squiz.Commenting.EmptyCatchComment"/>
     <rule ref="Squiz.Commenting.FunctionComment">
          <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
          <exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
@@ -65,8 +65,8 @@
       <!-- allow inline comments docblock for dependency injection ints -->
       <exclude name="Squiz.Commenting.InlineComment.DocBlock"/>
     </rule>
-    <rule ref="Squiz.Commenting.LongConditionClosingComment" />
-    <rule ref="Squiz.Commenting.PostStatementComment" />
+    <rule ref="Squiz.Commenting.LongConditionClosingComment"/>
+    <rule ref="Squiz.Commenting.PostStatementComment"/>
     <!-- code review -->
     <rule ref="Squiz.Commenting.PostStatementComment.Found">
       <severity>3</severity>

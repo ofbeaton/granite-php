@@ -11,25 +11,25 @@
        <!-- PSR-12: PSR12.Operators.OperatorSpacing -->
        <!-- we disagree with PSR-12, we want operator spacing, 
             but not on concatenation. Try to keep the squiz ones instead -->
-       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore" />
-       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter" />   
+       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
+       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>   
     </rule>
     
     <!-- 
       Generic 
     -->
-    <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
+    <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
         
-    <rule ref="Generic.Classes.DuplicateClassName" />
+    <rule ref="Generic.Classes.DuplicateClassName"/>
     
-    <rule ref="Generic.CodeAnalysis.EmptyPHPStatement" />
-    <rule ref="Generic.CodeAnalysis.EmptyStatement" />
-    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop" />
-    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall" />
-    <rule ref="Generic.CodeAnalysis.JumbledIncrementer" />
+    <rule ref="Generic.CodeAnalysis.EmptyPHPStatement"/>
+    <rule ref="Generic.CodeAnalysis.EmptyStatement"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopShouldBeWhileLoop"/>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall"/>
+    <rule ref="Generic.CodeAnalysis.JumbledIncrementer"/>
     
-    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement" />
-    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier" />    
+    <rule ref="Generic.CodeAnalysis.UnconditionalIfStatement"/>
+    <rule ref="Generic.CodeAnalysis.UnnecessaryFinalModifier"/>    
     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter"/>
     <!-- code review -->
     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.Found">
@@ -38,7 +38,7 @@
     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed">
         <severity>3</severity>
     </rule>
-    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod" />
+    <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
     <!-- code review -->
     <rule ref="Generic.CodeAnalysis.UselessOverridingMethod.Found">
       <severity>3</severity>
@@ -49,9 +49,9 @@
     <!-- PSR-1: Generic.Files.ByteOrderMark -->
     <!-- PSR-12: Generic.Files.LineEndings -->  
     <!-- PSR-12: Generic.Files.LineLength -->
-    <rule ref="Generic.Files.OneClassPerFile" />
-    <rule ref="Generic.Files.OneInterfacePerFile" />
-    <rule ref="Generic.Files.OneTraitPerFile" />
+    <rule ref="Generic.Files.OneClassPerFile"/>
+    <rule ref="Generic.Files.OneInterfacePerFile"/>
+    <rule ref="Generic.Files.OneTraitPerFile"/>
     
     <!-- PSR-12: Generic.Formatting.DisallowMultipleStatements -->
     <rule ref="Generic.Formatting.SpaceAfterCast">
@@ -83,12 +83,12 @@
         <severity>3</severity>
     </rule>
     
-    <rule ref="Generic.NamingConventions.CamelCapsFunctionName" />
-    <rule ref="Generic.NamingConventions.ConstructorName" />
+    <rule ref="Generic.NamingConventions.CamelCapsFunctionName"/>
+    <rule ref="Generic.NamingConventions.ConstructorName"/>
     <!-- PSR-1: Generic.NamingConventions.UpperCaseConstantName -->
     
-    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag" />
-    <rule ref="Generic.PHP.DeprecatedFunctions" />
+    <rule ref="Generic.PHP.CharacterBeforePHPOpeningTag"/>
+    <rule ref="Generic.PHP.DeprecatedFunctions"/>
     <!-- PSR-1: Generic.PHP.DisallowShortOpenTag but modified -->
     <rule ref="Generic.PHP.DisallowShortOpenTag">
       
@@ -97,22 +97,22 @@
     <rule ref="Generic.PHP.DisallowShortOpenTag.EchoFound">
       <severity>3</severity>
     </rule>
-    <rule ref="Generic.PHP.ForbiddenFunctions" />
+    <rule ref="Generic.PHP.ForbiddenFunctions"/>
     <!-- PSR-12: Generic.PHP.LowerCaseConstant -->
     <!-- PSR-12: Generic.PHP.LowerCaseKeyword -->
     <!-- PSR-12: Generic.PHP.LowerCaseType -->
-    <rule ref="Generic.PHP.NoSilencedErrors" />
-    <rule ref="Generic.PHP.SAPIUsage" />
-    <rule ref="Generic.PHP.Syntax" />
+    <rule ref="Generic.PHP.NoSilencedErrors"/>
+    <rule ref="Generic.PHP.SAPIUsage"/>
+    <rule ref="Generic.PHP.Syntax"/>
     
-    <rule ref="Generic.Strings.UnnecessaryStringConcat" />
+    <rule ref="Generic.Strings.UnnecessaryStringConcat"/>
     <!-- code review -->
     <rule ref="Generic.Strings.UnnecessaryStringConcat.Found">
         <severity>3</severity>
     </rule>
 
-    <rule ref="Generic.VersionControl.GitMergeConflict" />    
-    <rule ref="Generic.VersionControl.SubversionProperties" />
+    <rule ref="Generic.VersionControl.GitMergeConflict"/>    
+    <rule ref="Generic.VersionControl.SubversionProperties"/>
     <!-- set line ending style -->
 
     <rule ref="Generic.WhiteSpace.ArbitraryParenthesesSpacing">
@@ -121,30 +121,30 @@
      </properties>
     </rule>    
     <!-- PSR-12: Generic.WhiteSpace.DisallowTabIndent -->
-    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing" />
-    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing" />
+    <rule ref="Generic.WhiteSpace.IncrementDecrementSpacing"/>
+    <rule ref="Generic.WhiteSpace.LanguageConstructSpacing"/>
     
     <!-- PSR-12: Generic.WhiteSpace.ScopeIndent -->
     
     <!-- 
       MySource 
     -->
-    <rule ref="MySource.Debug.FirebugConsole" />
+    <rule ref="MySource.Debug.FirebugConsole"/>
     
-    <rule ref="MySource.Objects.AssignThis" />
+    <rule ref="MySource.Objects.AssignThis"/>
     
-    <rule ref="MySource.PHP.EvalObjectFactory" />
+    <rule ref="MySource.PHP.EvalObjectFactory"/>
     <!-- too strict, we often want to do this for short function calls -->
-    <!-- <rule ref="MySource.PHP.ReturnFunctionValue" /> -->
+    <!-- <rule ref="MySource.PHP.ReturnFunctionValue"/> -->
     
-    <rule ref="MySource.Strings.JoinStrings" />
+    <rule ref="MySource.Strings.JoinStrings"/>
     
     <!--
       Pear
     -->
     <!-- PSR-12: PEAR.Functions.ValidDefaultValue -->
     
-    <rule ref="PEAR.Files.IncludingFile" />
+    <rule ref="PEAR.Files.IncludingFile"/>
     
     <!--
       PSR-2
@@ -176,14 +176,14 @@
     <!--
       Squiz
     -->
-    <rule ref="Squiz.Arrays.ArrayBracketSpacing" />
-    <rule ref="Squiz.Arrays.ArrayDeclaration" />
+    <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
+    <rule ref="Squiz.Arrays.ArrayDeclaration"/>
     
-    <rule ref="Squiz.Classes.ClassDeclaration" />
-    <rule ref="Squiz.Classes.ClassFileName" />
-    <rule ref="Squiz.Classes.DuplicateProperty" />
-    <rule ref="Squiz.Classes.LowercaseClassKeywords" />
-    <rule ref="Squiz.Classes.SelfMemberReference" />
+    <rule ref="Squiz.Classes.ClassDeclaration"/>
+    <rule ref="Squiz.Classes.ClassFileName"/>
+    <rule ref="Squiz.Classes.DuplicateProperty"/>
+    <rule ref="Squiz.Classes.LowercaseClassKeywords"/>
+    <rule ref="Squiz.Classes.SelfMemberReference"/>
     <!-- PSR-1: Squiz.Classes.ValidClassName -->
     
     <!-- PSR-12: Squiz.ControlStructures.ControlSignature -->
@@ -192,31 +192,31 @@
     <!-- PSR-12: Squiz.ControlStructures.LowercaseDeclaration -->
     <rule ref="Squiz.ControlStructures.SwitchDeclaration">
          <!-- This contradicts PSR2.ControlStructures.SwitchDeclaration -->
-         <exclude name="Squiz.ControlStructures.SwitchDeclaration.BreakIndent" />
+         <exclude name="Squiz.ControlStructures.SwitchDeclaration.BreakIndent"/>
          <!-- TODO: Only allow empty case if there is a inline comment -->
          <exclude name="Squiz.ControlStructures.SwitchDeclaration.EmptyCase"/>
     </rule>    
    
-    <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace" />
-    <rule ref="Squiz.CSS.ClassDefinitionNameSpacing" />
-    <rule ref="Squiz.CSS.ClassDefinitionOpeningBraceSpace" />
-    <rule ref="Squiz.CSS.ColonSpacing" />
-    <rule ref="Squiz.CSS.ColourDefinition" />
-    <rule ref="Squiz.CSS.DisallowMultipleStyleDefinitions" />
-    <rule ref="Squiz.CSS.DuplicateClassDefinition" />
-    <rule ref="Squiz.CSS.DuplicateStyleDefinition" />
-    <rule ref="Squiz.CSS.EmptyClassDefinition" />
-    <rule ref="Squiz.CSS.EmptyStyleDefinition" />
-    <rule ref="Squiz.CSS.ForbiddenStyles" />
-    <rule ref="Squiz.CSS.Indentation" />
-    <rule ref="Squiz.CSS.LowercaseStyleDefinition" />
-    <rule ref="Squiz.CSS.MissingColon" />
-    <rule ref="Squiz.CSS.NamedColours" />
-    <rule ref="Squiz.CSS.Opacity" />
-    <rule ref="Squiz.CSS.SemicolonSpacing" />
-    <rule ref="Squiz.CSS.ShorthandSize" />
+    <rule ref="Squiz.CSS.ClassDefinitionClosingBraceSpace"/>
+    <rule ref="Squiz.CSS.ClassDefinitionNameSpacing"/>
+    <rule ref="Squiz.CSS.ClassDefinitionOpeningBraceSpace"/>
+    <rule ref="Squiz.CSS.ColonSpacing"/>
+    <rule ref="Squiz.CSS.ColourDefinition"/>
+    <rule ref="Squiz.CSS.DisallowMultipleStyleDefinitions"/>
+    <rule ref="Squiz.CSS.DuplicateClassDefinition"/>
+    <rule ref="Squiz.CSS.DuplicateStyleDefinition"/>
+    <rule ref="Squiz.CSS.EmptyClassDefinition"/>
+    <rule ref="Squiz.CSS.EmptyStyleDefinition"/>
+    <rule ref="Squiz.CSS.ForbiddenStyles"/>
+    <rule ref="Squiz.CSS.Indentation"/>
+    <rule ref="Squiz.CSS.LowercaseStyleDefinition"/>
+    <rule ref="Squiz.CSS.MissingColon"/>
+    <rule ref="Squiz.CSS.NamedColours"/>
+    <rule ref="Squiz.CSS.Opacity"/>
+    <rule ref="Squiz.CSS.SemicolonSpacing"/>
+    <rule ref="Squiz.CSS.ShorthandSize"/>
     
-    <rule ref="Squiz.Formatting.OperatorBracket" />
+    <rule ref="Squiz.Formatting.OperatorBracket"/>
     
     <!-- PSR-12: Squiz.Functions.FunctionDeclaration -->
     <!-- PSR-12: Squiz.Functions.FunctionDeclarationArgumentSpacing -->
@@ -225,31 +225,31 @@
       <severity>5</severity>
     </rule>    
     -->
-    <rule ref="Squiz.Functions.FunctionDuplicateArgument" />
-    <rule ref="Squiz.Functions.GlobalFunction" />
+    <rule ref="Squiz.Functions.FunctionDuplicateArgument"/>
+    <rule ref="Squiz.Functions.GlobalFunction"/>
     <rule ref="Squiz.Functions.GlobalFunction.Found">
         <message>Consider putting global function "%s" in a class (non-static for testing)</message>
     </rule>
     <!-- PSR-12: Squiz.Functions.LowercaseFunctionKeywords -->
     <!-- PSR-12: Squiz.Functions.MultilineFunctionDeclaration -->
     
-    <rule ref="Squiz.Objects.DisallowObjectStringIndex" />
-    <rule ref="Squiz.Objects.ObjectInstantiation" />
-    <rule ref="Squiz.Objects.ObjectMemberComma" />
+    <rule ref="Squiz.Objects.DisallowObjectStringIndex"/>
+    <rule ref="Squiz.Objects.ObjectInstantiation"/>
+    <rule ref="Squiz.Objects.ObjectMemberComma"/>
     
-    <rule ref="Squiz.Operators.ComparisonOperatorUsage" />
-    <rule ref="Squiz.Operators.IncrementDecrementUsage" />
-    <rule ref="Squiz.Operators.ValidLogicalOperators" />
+    <rule ref="Squiz.Operators.ComparisonOperatorUsage"/>
+    <rule ref="Squiz.Operators.IncrementDecrementUsage"/>
+    <rule ref="Squiz.Operators.ValidLogicalOperators"/>
     
-    <rule ref="Squiz.PHP.CommentedOutCode" />
+    <rule ref="Squiz.PHP.CommentedOutCode"/>
     <!-- code review -->
     <rule ref="Squiz.PHP.CommentedOutCode.Found">
       <severity>3</severity>
     </rule>
-    <rule ref="Squiz.PHP.DisallowBooleanStatement" />
+    <rule ref="Squiz.PHP.DisallowBooleanStatement"/>
     <!-- this errors on $m = func() ? 'hi' : 'ho'; -->
-    <!-- <rule ref="Squiz.PHP.DisallowComparisonAssignment" /> -->
-    <rule ref="Squiz.PHP.DisallowMultipleAssignments" />
+    <!-- <rule ref="Squiz.PHP.DisallowComparisonAssignment"/> -->
+    <rule ref="Squiz.PHP.DisallowMultipleAssignments"/>
     <!-- TODO: Squiz.PHP.DisallowSizeFunctionsInLoops that allows while loops. while (count($threads) > 0) is too valid to avoid -->
     <!-- TODO: we need something that disallows print_r only if it doesn't return, but prints -->
     <rule ref="Squiz.PHP.DiscouragedFunctions">
@@ -259,17 +259,17 @@
          </property>
       </properties>    
     </rule>                   
-    <rule ref="Squiz.PHP.EmbeddedPhp" />
-    <rule ref="Squiz.PHP.Eval" />    
-    <rule ref="Squiz.PHP.GlobalKeyword" />
-    <rule ref="Squiz.PHP.Heredoc" />
-    <rule ref="Squiz.PHP.InnerFunctions" />
-    <rule ref="Squiz.PHP.LowercasePHPFunctions" />
-    <rule ref="Squiz.PHP.NonExecutableCode" />
+    <rule ref="Squiz.PHP.EmbeddedPhp"/>
+    <rule ref="Squiz.PHP.Eval"/>    
+    <rule ref="Squiz.PHP.GlobalKeyword"/>
+    <rule ref="Squiz.PHP.Heredoc"/>
+    <rule ref="Squiz.PHP.InnerFunctions"/>
+    <rule ref="Squiz.PHP.LowercasePHPFunctions"/>
+    <rule ref="Squiz.PHP.NonExecutableCode"/>
     
-    <rule ref="Squiz.Scope.MemberVarScope" />
+    <rule ref="Squiz.Scope.MemberVarScope"/>
     <!-- PSR-12: Squiz.Scope.MethodScope -->
-    <rule ref="Squiz.Scope.StaticThisUsage" />
+    <rule ref="Squiz.Scope.StaticThisUsage"/>
     
     <!-- conflicts with PSR12.Operators.OperatorSpacing, we will take this one instead -->     
     <rule ref="Squiz.Strings.ConcatenationSpacing">
@@ -277,8 +277,8 @@
            <property name="ignoreNewlines" value="true"/>
        </properties>
     </rule>    
-    <rule ref="Squiz.Strings.DoubleQuoteUsage" />
-    <rule ref="Squiz.Strings.EchoedStrings" />
+    <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
+    <rule ref="Squiz.Strings.EchoedStrings"/>
       
     <rule ref="Squiz.WhiteSpace.CastSpacing">
        <!-- let's try without these for PSR-12 adoption
@@ -295,22 +295,22 @@
       <!-- allow no blank lines before close -->
       <except name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
     </rule>    
-    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace" />
+    <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
     
     <!-- TODO: must allow no lines after class on last method of class -->    
     <rule ref="Squiz.WhiteSpace.FunctionSpacing">
       <!-- allow no lines after method class, for last method in class -->
       <except name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
     </rule>
-    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing" />
-    <rule ref="Squiz.WhiteSpace.MemberVarSpacing" />
-    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing" />
+    <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
+    <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>
+    <rule ref="Squiz.WhiteSpace.ObjectOperatorSpacing"/>
     <!-- we want Squiz.Strings.ConcatenationSpacing, but PSR12.Operators.OperatorSpacing, so take this one instead -->
-    <rule ref="Squiz.WhiteSpace.OperatorSpacing" />
-    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing" />                                                                
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing"/>                                                                
     <!-- PSR-12: Squiz.WhiteSpace.ScopeClosingBrace -->
     <!-- PSR-12: Squiz.WhiteSpace.ScopeKeywordSpacing -->
-    <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
+    <rule ref="Squiz.WhiteSpace.SemicolonSpacing"/>
     <!-- PSR-12: Squiz.WhiteSpace.SuperfluousWhitespace" -->    
     <!-- let's try without these for PSR-12 adoption
     <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace.StartFile">

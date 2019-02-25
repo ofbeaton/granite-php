@@ -70,6 +70,10 @@ You usually want to relax some requirements for test suites, in that case run:
 composer check-tests
 ```
 
+## Documentation
+
+Please head over to the [PHP page](https://github.com/ofbeaton/granite/wiki/PHP) on the Granite wiki.
+
 ## License
 
 This software is distributed under the MIT License. Please see [License file](LICENSE) for more information.

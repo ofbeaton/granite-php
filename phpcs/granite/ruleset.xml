@@ -2,7 +2,7 @@
 <ruleset name="granite">
     <description>Opinionated coding style enforcement for PHP.</description>
 
-    <rule ref="./granite-syntax"/>
-    <rule ref="./granite-docs"/>
+    <rule ref="vendor/ofbeaton/granite-php/phpcs/granite-syntax"/>
+    <rule ref="vendor/ofbeaton/granite-php/phpcs/granite-docs"/>
 
 </ruleset>

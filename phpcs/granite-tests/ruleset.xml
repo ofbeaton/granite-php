@@ -2,6 +2,6 @@
 <ruleset name="granite-tests">
     <description>Opinionated coding style enforcement for PHP test suites.</description>
 
-    <rule ref="./granite-syntax"/>
+    <rule ref="vendor/ofbeaton/granite-php/phpcs/granite-syntax"/>
 
 </ruleset>

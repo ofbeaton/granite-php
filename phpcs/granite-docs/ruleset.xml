@@ -39,7 +39,7 @@
     -->
     <!-- TODO: Create our own BlockComment class that allows single line variable hints for IDEs --> 
     <rule ref="Squiz.Commenting.BlockComment">
-      <except name="Squiz.Commenting.BlockComment.SingleLine"/>
+      <exclude name="Squiz.Commenting.BlockComment.SingleLine"/>
     </rule>    
     <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
     <rule ref="Squiz.Commenting.ClassComment">

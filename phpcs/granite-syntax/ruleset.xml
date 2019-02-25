@@ -286,7 +286,7 @@
     <rule ref="Squiz.WhiteSpace.CastSpacing">
        <!-- let's try without these for PSR-12 adoption
        allow blank lines above catch, elseif, else
-       <except name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+       <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
        -->        
     </rule>
     <!-- TODO: force blank line above multiple catch, elseif, else -->
@@ -296,14 +296,14 @@
     <rule ref="Squiz.WhiteSpace.FunctionClosingBraceSpace">
       <!-- TODO: We may want to require 0 spaces before close, this one wants 1 -->
       <!-- allow no blank lines before close -->
-      <except name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
+      <exclude name="Squiz.WhiteSpace.FunctionClosingBraceSpace.SpacingBeforeClose"/>
     </rule>    
     <rule ref="Squiz.WhiteSpace.FunctionOpeningBraceSpace"/>
     
     <!-- TODO: must allow no lines after class on last method of class -->    
     <rule ref="Squiz.WhiteSpace.FunctionSpacing">
       <!-- allow no lines after method class, for last method in class -->
-      <except name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
+      <exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
     </rule>
     <rule ref="Squiz.WhiteSpace.LogicalOperatorSpacing"/>
     <rule ref="Squiz.WhiteSpace.MemberVarSpacing"/>

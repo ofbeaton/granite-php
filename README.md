@@ -1,4 +1,4 @@
-# granite
+# granite-php
 Opinionated coding style enforcement for PHP.
 
 ## Contains

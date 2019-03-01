@@ -40,6 +40,8 @@
     <!-- TODO: Create our own BlockComment class that allows single line variable hints for IDEs --> 
     <rule ref="Squiz.Commenting.BlockComment">
       <exclude name="Squiz.Commenting.BlockComment.SingleLine"/>
+      <!-- sometimes we use block comments to document vars for type hints -->
+      <exclude name="Squiz.Commenting.BlockComment.NoEmptyLineAfter"/>
     </rule>    
     <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
     <rule ref="Squiz.Commenting.ClassComment">

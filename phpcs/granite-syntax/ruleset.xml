@@ -12,7 +12,11 @@
        <!-- we disagree with PSR-12, we want operator spacing, 
             but not on concatenation. Try to keep the squiz ones instead -->
        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
-       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>   
+       <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
+       <!-- let's try without these for PSR-12 adoption
+       allow blank lines above catch, elseif, else
+       <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
+       -->   
     </rule>
     
     <!-- 
@@ -283,12 +287,7 @@
     <rule ref="Squiz.Strings.DoubleQuoteUsage"/>
     <rule ref="Squiz.Strings.EchoedStrings"/>
       
-    <rule ref="Squiz.WhiteSpace.CastSpacing">
-       <!-- let's try without these for PSR-12 adoption
-       allow blank lines above catch, elseif, else
-       <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
-       -->        
-    </rule>
+    <rule ref="Squiz.WhiteSpace.CastSpacing"/>
     <!-- TODO: force blank line above multiple catch, elseif, else -->
     <!-- PSR-12: Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen -->
     <!-- PSR-12: Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose -->

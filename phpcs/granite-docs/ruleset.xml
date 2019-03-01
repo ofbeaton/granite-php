@@ -54,6 +54,7 @@
     <rule ref="Squiz.Commenting.FunctionComment">
          <exclude name="Squiz.Commenting.FunctionComment.ParamCommentFullStop"/>
          <exclude name="Squiz.Commenting.FunctionComment.ParamCommentNotCapital"/>
+         <exclude name="Squiz.Commenting.FunctionComment.ThrowsNoFullStop"/>         
     </rule>                
     <rule ref="Squiz.Commenting.FunctionCommentThrowTag">
       <!-- TODO: throw $e; should be OK when it match the catch exception type. What can we do about this? -->

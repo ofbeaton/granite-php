@@ -184,7 +184,11 @@
       Squiz
     -->
     <rule ref="Squiz.Arrays.ArrayBracketSpacing"/>
-    <rule ref="Squiz.Arrays.ArrayDeclaration"/>
+    <rule ref="Squiz.Arrays.ArrayDeclaration">
+         <!-- aligning keys to the open brace makes the line limit impossible to do -->
+         <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
+         <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+    </rule>
     
     <rule ref="Squiz.Classes.ClassDeclaration"/>
     <rule ref="Squiz.Classes.ClassFileName"/>

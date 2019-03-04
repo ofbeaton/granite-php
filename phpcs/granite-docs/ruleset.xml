@@ -42,7 +42,11 @@
       <exclude name="Squiz.Commenting.BlockComment.SingleLine"/>
       <!-- sometimes we use block comments to document vars for type hints -->
       <exclude name="Squiz.Commenting.BlockComment.NoEmptyLineAfter"/>
-      <exclude name="Squiz.Commenting.BlockComment.NoCapital"/>
+      <exclude name="Squiz.Commenting.BlockComment.NoCapital"/>      
+    </rule>
+    <!-- usually points to commented code -->
+    <rule ref="Squiz.Commenting.BlockComment.NoEmptyLineBefore">
+         <severity>3</severity>
     </rule>    
     <!-- TODO: Create our own ClassComment class that has the tags we want to require -->
     <rule ref="Squiz.Commenting.ClassComment">

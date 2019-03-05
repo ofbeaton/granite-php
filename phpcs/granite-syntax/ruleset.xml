@@ -48,6 +48,9 @@
     <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClassAfterLastUsed">
         <severity>3</severity>
     </rule>
+    <rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundInExtendedClass">
+        <severity>3</severity>
+    </rule>
     <rule ref="Generic.CodeAnalysis.UselessOverridingMethod"/>
     <!-- code review -->
     <rule ref="Generic.CodeAnalysis.UselessOverridingMethod.Found">

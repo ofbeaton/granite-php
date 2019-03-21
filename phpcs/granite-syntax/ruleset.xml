@@ -194,6 +194,12 @@
          <!-- aligning keys to the open brace makes the line limit impossible to do -->
          <exclude name="Squiz.Arrays.ArrayDeclaration.KeyNotAligned"/>
          <exclude name="Squiz.Arrays.ArrayDeclaration.CloseBraceNotAligned"/>
+         <!-- don't force single item arrays onto one line, we may expect having to add more keys later -->
+    </rule>
+    
+    <!-- Code review: don't force single item arrays onto one line, we may expect having to add more keys later -->
+    <rule ref="Squiz.Arrays.ArrayDeclaration.MultiLineNotAllowed">
+         <severity>3</severity>
     </rule>
     
     <rule ref="Squiz.Classes.ClassDeclaration"/>
